@@ -1,0 +1,167 @@
+components:
+  schemas:
+    ProjectInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: project name (unique per provider)
+        description:
+          type: string
+          description: a brief description about the project
+        characteristics:
+          type: array
+          description: project characteristics.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              id:
+                type: string
+                description: slug-type id of characteristic
+              ref:
+                type: string
+                description: ref of the group the value belongs to. If not specified, will use first group.
+              rule:
+                type: string
+                description: the preferences rule `maximum`, `minimum`, `exact`, or `preference_list`. `maximum` and `minimum` only supported for isQuantifiable = true.
+              value:
+                type: array
+                description: values of characteristic from most preferred to least preferred by ref. If `exact`, length = 1. If `maximum` or `minimum` no need to specify value.
+                items:
+                  type: string
+              weight:
+                type: number
+                format: float
+                description: weight / importance of characteristic. Max value is 1.0. (optional)
+      required:
+        - name
+        - provider
+        - characteristics
+    ProjectUpdateInput:
+      type: object
+      properties:
+        description:
+          type: string
+          description: a brief description about the project
+        characteristics:
+          type: array
+          description: project characteristics.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              id:
+                type: string
+                description: slug-type id of characteristic
+              ref:
+                type: string
+                description: ref of the group the value belongs to. If not specified, will use first group.
+              rule:
+                type: string
+                description: the preferences rule `maximum`, `minimum`, `exact`, or `preference_list`. `maximum` and `minimum` only supported for isQuantifiable = true.
+              value:
+                type: array
+                description: values of characteristic from most preferred to least preferred by ref. If `exact`, length = 1. If `maximum` or `minimum` no need to specify value.
+                items:
+                  type: string
+              weight:
+                type: number
+                format: float
+                description: weight / importance of characteristic. Max value is 1.0. (optional)
+    Project:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: auto-generated id by MongoDB (unique)
+        id:
+          type: string
+          description: slug-type id (lowercase string with no special characters delimited by dash '-') derived from provider and project name (unique)
+        name:
+          type: string
+          description: project name (unique per provider)
+        project:
+          type: string
+          description: slug-type-id of the project name
+        provider:
+          type: string
+          description: slug-type id of the provider company
+        description:
+          type: string
+          description: a brief description about the project
+        characteristics:
+          type: array
+          description: project characteristics.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              id:
+                type: string
+                description: slug-type id of characteristic
+              ref:
+                type: string
+                description: ref of the group the value belongs to. If not specified, will use first group.
+              rule:
+                type: string
+                description: the preferences rule `maximum`, `minimum`, `exact`, or `preference_list`. `maximum` and `minimum` only supported for isQuantifiable = true.
+              value:
+                type: array
+                description: values of characteristic from most preferred to least preferred by ref. If `exact`, length = 1. If `maximum` or `minimum` no need to specify value.
+                items:
+                  type: string
+              weight:
+                type: number
+                format: float
+                description: weight / importance of characteristic. Max value is 1.0. (optional)
+        createdAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this project is created by MongoDB
+        updatedAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this project is modified by MongoDB
+  examples:
+    ProjectInputExample:
+      value:
+        name: "My Project"
+        description: "Add value to a product by incrementally extending it, ensuring it is usable, releasable and maintainable."
+        characteristics: [
+          {
+            id: "management-commitment",
+            rule: "maximum"
+          }
+        ]
+    ProjectExample:
+      value:
+        _id: "5d1cfc36bdc07232bc0bc1f7"
+        id: "company-a-ltd/my-project"
+        name: "My Project"
+        project: "my-project"
+        provider: "company-a-ltd"
+        description: "This is a project"
+        characteristics: [
+          {
+            _id: "5d23baf907290510cc6ad57c",
+            id: "impact",
+            rule: "maximum",
+            weight: 0.15
+          },
+          {
+            _id: "5d23baf907290510cc6ad57b",
+            id: "user-goals",
+            rule: "preference_list",
+            value: ["one goal", "multi-goals"],
+            weight: 0.85
+          }
+        ]
+        createdAt: "2019-07-07T19:51:36.284Z"
+        updatedAt: "2019-07-07T19:51:36.284Z"

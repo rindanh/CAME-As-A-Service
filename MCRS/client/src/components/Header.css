@@ -1,0 +1,18 @@
+@media only screen and (min-width: 576px) {
+  .header {
+    height: 8vh;
+  }
+}
+.header a {
+  color: unset;
+}
+.header a:hover {
+  text-decoration: unset;
+}
+.header .navbar-text a {
+  color: unset;
+}
+
+.header .navbar-text .user {
+  color: white;
+}

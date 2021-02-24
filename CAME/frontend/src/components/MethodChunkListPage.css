@@ -1,0 +1,8 @@
+tr :hover {
+	cursor: pointer;
+}
+
+.row-selected {
+	background-color: #ececec; 
+}
+

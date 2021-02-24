@@ -1,0 +1,12 @@
+.not-found {
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: #f1f1f1;
+    font-size: 1.25rem;
+}
+
+.not-found .title {
+    font-size: 7.5rem;
+}

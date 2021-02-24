@@ -1,0 +1,787 @@
+{
+  "intention": [
+    "Development of the required software system",
+    "Track daily progress with customized Patterns (extension - 1000)"
+  ],
+  "activitySpaces": [
+    {
+      "activities": [
+        {
+          "completionCriterions": {
+            "alphas": [
+              "Requirements.Addressed",
+              "ProductBacklogItem.Done",
+              "SoftwareSystem.Demonstrable",
+              "SoftwareChange.CodeWorking"
+            ],
+            "workProducts": [
+              "TestCase.Scripted"
+            ]
+          },
+          "entryCriterions": {
+            "alphas": [
+              "ProductBacklogItem.ReadyForDevelopment"
+            ],
+            "workProducts": [
+              "TestCase.TestIdeasCaptured"
+            ]
+          },
+          "competencies": [
+            "StakeholderRepresentation.2",
+            "Analysis.2",
+            "Development.3",
+            "Testing.3"
+          ],
+          "_id": "5f609666b8262231f48403af",
+          "nameId": "EvolveaReleasableProduct",
+          "name": "Evolve a Releasable Product",
+          "description": "Add value to a product and ensure it is usable and of production quality."
+        }
+      ],
+      "_id": "5f609666b8262231f48403ae",
+      "nameId": "ImplementTheSystem",
+      "name": "Implement The System",
+      "description": "Build a system by implementing, testing and integrating one or more system elements. This includes bug fixing and unit testing."
+    },
+    {
+      "activities": [
+        {
+          "completionCriterions": {
+            "alphas": [
+              "Requirements.Addressed",
+              "ProductBacklogItem.Done",
+              "SoftwareSystem.Demonstrable",
+              "SoftwareChange.CodeWorking"
+            ],
+            "workProducts": [
+              "TestCase.Scripted"
+            ]
+          },
+          "entryCriterions": {
+            "alphas": [
+              "ProductBacklogItem.ReadyForDevelopment"
+            ],
+            "workProducts": [
+              "TestCase.TestIdeasCaptured"
+            ]
+          },
+          "competencies": [
+            "StakeholderRepresentation.2",
+            "Analysis.2",
+            "Development.3",
+            "Testing.3"
+          ],
+          "_id": "5f609666b8262231f48403b1",
+          "nameId": "EvolveaReleasableProduct",
+          "name": "Evolve a Releasable Product",
+          "description": "Add value to a product and ensure it is usable and of production quality."
+        }
+      ],
+      "_id": "5f609666b8262231f48403b0",
+      "nameId": "TestTheSystem",
+      "name": "Test The System",
+      "description": "Verify that the system produced meets the stakeholders’ requirements."
+    },
+    {
+      "activities": [
+        {
+          "completionCriterions": {
+            "alphas": [
+              "Work.UnderControl",
+              "Impediment.Owned"
+            ],
+            "workProducts": []
+          },
+          "entryCriterions": {
+            "alphas": [
+              "Impediment.Raised"
+            ],
+            "workProducts": []
+          },
+          "competencies": [
+            "Leadership.2",
+            "Management.2"
+          ],
+          "_id": "5f60941352b780335cc8c210",
+          "nameId": "HoldaDailyStand-Up",
+          "name": "Hold a Daily Stand-Up",
+          "description": "The team meets every day, same time and place, to assess progress, coordinate activity, and raise and action impediments. The meeting is timeboxed, typically to 15 minutes."
+        }
+      ],
+      "_id": "5f60941352b780335cc8c20f",
+      "nameId": "CoordinateActivity",
+      "name": "Coordinate Activity",
+      "description": "Co-ordinate and direct the team’s work. This includes all ongoing planning and re-planning of the work, and adding any additional resources needed to complete the formation of the team. Coordinate activity to: Select and prioritize work, Adapt plans to reflect results, Get the right people on the team, Ensure that objectives are met, Handle change."
+    }
+  ],
+  "alphas": [
+    {
+      "workProducts": [
+        {
+          "levelOfDetails": [
+            "TestIdeasCaptured",
+            "Scripted",
+            "Automated"
+          ],
+          "_id": "5f609666b8262231f48403b3",
+          "nameId": "TestCase",
+          "name": "Test Case",
+          "description": "Defines test inputs and expected results to help evaluate whether a specific aspect of the system works correctly."
+        }
+      ],
+      "states": [
+        {
+          "checklists": [
+            "Stakeholders agree system is to be produced",
+            "Users identified",
+            "Funding stakeholders identified",
+            "Opportunity clear"
+          ],
+          "_id": "5f609666b8262231f48403b4",
+          "nameId": "Conceived",
+          "name": "Conceived",
+          "description": "The need for a new system has been agreed."
+        },
+        {
+          "checklists": [
+            "Development stakeholders identified",
+            "System purpose agreed",
+            "System success clear",
+            "Shared solution understanding exists",
+            "Requirement's format agreed",
+            "Requirements management in place",
+            "Prioritization scheme clear",
+            "Constraints identified & considered",
+            "Assumptions clear"
+          ],
+          "_id": "5f609666b8262231f48403b5",
+          "nameId": "Bounded",
+          "name": "Bounded",
+          "description": "The purpose and theme of the new system are clear."
+        },
+        {
+          "checklists": [
+            "Requirements shared",
+            "Requirements' origin clear",
+            "Rationale clear",
+            "Conflicts addressed",
+            "Essential characteristics clear",
+            "Requirements management in place",
+            "Key usage scenarios explained",
+            "Priorities clear",
+            "Impact understood",
+            "Team knows & agrees on what to deliver"
+          ],
+          "_id": "5f609666b8262231f48403b6",
+          "nameId": "Coherent",
+          "name": "Coherent",
+          "description": "The requirements provide a coherent description of the essential characteristics of the new system."
+        },
+        {
+          "checklists": [
+            "Acceptable solution described",
+            "Change under control",
+            "Value to be realized clear",
+            "Clear how opportunity addressed",
+            "Testable"
+          ],
+          "_id": "5f609666b8262231f48403b7",
+          "nameId": "Acceptable",
+          "name": "Acceptable",
+          "description": "The requirements describe a system that is acceptable to the stakeholders."
+        },
+        {
+          "checklists": [
+            "Enough addressed to be acceptable",
+            "Requirements and system match",
+            "Value realized clear",
+            "System worth making operational"
+          ],
+          "_id": "5f609666b8262231f48403b8",
+          "nameId": "Addressed",
+          "name": "Addressed",
+          "description": "Enough of the requirements have been addressed to satisfy the need for a new system in a way that is acceptable to the stakeholders."
+        },
+        {
+          "checklists": [
+            "Stakeholders accept requirements",
+            "No hindering requirements",
+            "Requirements fully satisfied"
+          ],
+          "_id": "5f609666b8262231f48403b9",
+          "nameId": "Fulfilled",
+          "name": "Fulfilled",
+          "description": "The requirements that have been addressed fully satisfy the need for a new system."
+        }
+      ],
+      "subAlphas": [
+        {
+          "workProducts": [],
+          "states": [
+            {
+              "checklists": [
+                "A way to enhance the value of a product has been found",
+                "The item has an agreed name that is unique and meaningful",
+                "There is a shared high-level understanding of what the item is and why it is needed"
+              ],
+              "_id": "5f609666b8262231f48403bb",
+              "nameId": "Identified",
+              "name": "Identified",
+              "description": "A way to enhance the value of a product has been found. The item is sufficiently well understood that the team responsible for adding it to the product can plan and start the work to get this done."
+            },
+            {
+              "checklists": [
+                "The item is well-enough understood by the stakeholders and the team for it to be prioritized for development",
+                "The value is understood enough to proceed",
+                "The size of the item is understood enough to proceed",
+                "The relative priority of the item is agreed"
+              ],
+              "_id": "5f609666b8262231f48403bc",
+              "nameId": "ReadyForDevelopment",
+              "name": "Ready For Development",
+              "description": "The item is sufficiently well understood that the team responsible for adding it to the product can plan and start the work to get this done."
+            },
+            {
+              "checklists": [
+                "The item has been included in the product",
+                "The stakeholders are happy that the value associated with the item has been realized",
+                "The item has been verified as meeting all relevant quality criteria",
+                "The item has been validated as being usable and fit-for-purpose"
+              ],
+              "_id": "5f609666b8262231f48403bd",
+              "nameId": "Done",
+              "name": "Done",
+              "description": "The item has been implemented in the product and has been demonstrated to be of adequate quality."
+            }
+          ],
+          "_id": "5f609666b8262231f48403ba",
+          "nameId": "ProductBacklogItem",
+          "name": "Product Backlog Item",
+          "parent_name_id": "Requirements",
+          "description": "Something to build into the product to enhance its value."
+        }
+      ],
+      "_id": "5f609666b8262231f48403b2",
+      "nameId": "Requirements",
+      "name": "Requirements",
+      "description": "What the software system must do to address the opportunity and satisfy the stakeholders."
+    },
+    {
+      "workProducts": [],
+      "states": [
+        {
+          "checklists": [
+            "Architecture selection criteria agreed",
+            "HW platforms identified",
+            "Technologies selected",
+            "System boundary known",
+            "Decisions on system organization made",
+            "Buy, build, reuse decisions made",
+            "Key technical risks agreed to"
+          ],
+          "_id": "5f609666b8262231f48403bf",
+          "nameId": "ArchitectureSelected",
+          "name": "Architecture Selected",
+          "description": "An architecture has been selected that addresses the key technical risks and any applicable organizational constraints."
+        },
+        {
+          "checklists": [
+            "Key architectural characteristics demonstrated",
+            "System exercised & performance measured",
+            "Critical HW configurations demonstrated",
+            "Critical interfaces demonstrated",
+            "Integration with environment demonstrated",
+            "Architecture accepted as fit-for-purpose"
+          ],
+          "_id": "5f609666b8262231f48403c0",
+          "nameId": "Demonstrable",
+          "name": "Demonstrable",
+          "description": "An executable version of the system is available that demonstrates the architecture is fit for purpose and supports functional and non-functional testing."
+        },
+        {
+          "checklists": [
+            "System can be operated",
+            "System functionality tested",
+            "System performance acceptable",
+            "Defect levels acceptable",
+            "System fully documented",
+            "Release content known",
+            "Added value clear"
+          ],
+          "_id": "5f609666b8262231f48403c1",
+          "nameId": "Usable",
+          "name": "Usable",
+          "description": "The system is usable and demonstrates all of the quality characteristics of an operational system."
+        },
+        {
+          "checklists": [
+            "User documentation available",
+            "System accepted as fit-for-purpose",
+            "Stakeholders want the system",
+            "Operational support in place"
+          ],
+          "_id": "5f609666b8262231f48403c2",
+          "nameId": "Ready",
+          "name": "Ready",
+          "description": "The system (as a whole) has been accepted for deployment in a live environment."
+        },
+        {
+          "checklists": [
+            "System available for use  ",
+            "System live",
+            "Agreed service levels supported"
+          ],
+          "_id": "5f609666b8262231f48403c3",
+          "nameId": "Operational",
+          "name": "Operational",
+          "description": "The system is in use in an operational environment."
+        },
+        {
+          "checklists": [
+            "Replaced or discontinued",
+            "No longer supported",
+            "No authorized users",
+            "Updates stopped"
+          ],
+          "_id": "5f609666b8262231f48403c4",
+          "nameId": "Retired",
+          "name": "Retired",
+          "description": "The system is no longer supported."
+        }
+      ],
+      "subAlphas": [
+        {
+          "workProducts": [],
+          "states": [
+            {
+              "checklists": [
+                "There is a new test or tests that the software change is designed to pass",
+                "It is clear which requirement, change request or defect the software change is needed to meet",
+                "The change can be made, tested, integrated and retested in a single developer sitting"
+              ],
+              "_id": "5f609666b8262231f48403c6",
+              "nameId": "PurposeClear",
+              "name": "Purpose Clear",
+              "description": "It is clear what the goal or outcome of the code change is: for example, the new test or tests that need to pass have been written."
+            },
+            {
+              "checklists": [
+                "The change has been made and tested",
+                "The change has been integrated into the main product",
+                "The integrated code has been tested",
+                "All tests are passing"
+              ],
+              "_id": "5f609666b8262231f48403c7",
+              "nameId": "CodeWorking",
+              "name": "Code Working",
+              "description": "The code has been changed to achieve the purpose of the change and the implementation has been verified against relevant quality criteria."
+            },
+            {
+              "checklists": [
+                "The code meets coding standards",
+                "The code has been refactored post the change to ensure it is at least as maintainable as it was before the change was made",
+                "All tests are passing"
+              ],
+              "_id": "5f609666b8262231f48403c8",
+              "nameId": "CodeMaintainable",
+              "name": "Code Maintainable",
+              "description": "Any necessary code refactoring has been done to ensure that the code is not only working but is also maintainable (or, at the very least, no less maintainable than before the change was applied)."
+            }
+          ],
+          "_id": "5f609666b8262231f48403c5",
+          "nameId": "SoftwareChange",
+          "name": "Software Change",
+          "parent_name_id": "SoftwareSystem",
+          "description": "A single change to the code-base that is made for a known purpose and is tested before it is integrated."
+        }
+      ],
+      "_id": "5f609666b8262231f48403be",
+      "nameId": "SoftwareSystem",
+      "name": "Software System",
+      "description": "A system made up of software, hardware, and data that provides its primary value by the execution of the software."
+    },
+    {
+      "workProducts": [],
+      "states": [
+        {
+          "checklists": [
+            "Team actively support principles",
+            "Stakeholders agree with principles",
+            "Tool needs agreed",
+            "Approach recommended",
+            "Operational context understood",
+            "Practice & tool constraints known"
+          ],
+          "_id": "5f609666b8262231f48403ca",
+          "nameId": "PrinciplesEstablished",
+          "name": "Principles Established",
+          "description": "The principles, and constraints, that shape the way-of-working are established."
+        },
+        {
+          "checklists": [
+            "Key practices & tools selected",
+            "Practices needed to start work agreed",
+            "Non-negotiable practices & tools identified",
+            "Gaps between available and needed way of working understood",
+            "Gaps in capability understood",
+            "Integrated way of working available"
+          ],
+          "_id": "5f609666b8262231f48403cb",
+          "nameId": "FoundationEstablished",
+          "name": "Foundation Established",
+          "description": "The key practices, and tools, that form the foundation of the way of working are selected and ready for use."
+        },
+        {
+          "checklists": [
+            "Practices & tools in use",
+            "Regularly inspected",
+            "Adapted to context",
+            "Supported by team",
+            "Feedback mechanisms in place",
+            "Practices & tools support collaboration"
+          ],
+          "_id": "5f609666b8262231f48403cc",
+          "nameId": "InUse",
+          "name": "In Use",
+          "description": "Some members of the team are using, and adapting, the way-of-working."
+        },
+        {
+          "checklists": [
+            "Used by whole team",
+            "Accessible to whole team",
+            "Inspected and adapted by whole team"
+          ],
+          "_id": "5f609666b8262231f48403cd",
+          "nameId": "InPlace",
+          "name": "In Place",
+          "description": "All team members are using the way of working to accomplish their work."
+        },
+        {
+          "checklists": [
+            "Predictable progress being made",
+            "Practices naturally applied",
+            "Tools naturally support way-of-working",
+            "Continually tuned"
+          ],
+          "_id": "5f609666b8262231f48403ce",
+          "nameId": "WorkingWell",
+          "name": "Working Well",
+          "description": "The team’s way of working is working well for the team."
+        },
+        {
+          "checklists": [
+            "No longer in use",
+            "Lessons learned shared"
+          ],
+          "_id": "5f609666b8262231f48403cf",
+          "nameId": "Retired",
+          "name": "Retired",
+          "description": "The way of working is no longer in use by the team."
+        }
+      ],
+      "subAlphas": [],
+      "_id": "5f609666b8262231f48403c9",
+      "nameId": "WayOfWorking",
+      "name": "Way of Working",
+      "description": "The tailored set of practices and tools used by a team to guide and support their work. The team evolves their way of working alongside their understanding of their mission and their working environment. As their work proceeds they continually reflect on their way of working and adapt it to their current context, if necessary."
+    },
+    {
+      "workProducts": [],
+      "states": [
+        {
+          "checklists": [
+            "Required result clear",
+            "Constraints clear",
+            "Funding stakeholders known",
+            "Initiator identified",
+            "Accepting stakeholders known",
+            "Source of funding clear",
+            "Priority clear"
+          ],
+          "_id": "5f60941352b780335cc8c212",
+          "nameId": "Initiated",
+          "name": "Initiated",
+          "description": "The work has been requested."
+        },
+        {
+          "checklists": [
+            "Commitment made",
+            "Cost and effort estimated",
+            "Resource availability understood",
+            "Risk exposure understood",
+            "Acceptance criteria established",
+            "Sufficiently broken down to start",
+            "Tasks identified and prioritized",
+            "Credible plan in place",
+            "Funding in place",
+            "At least one team member ready",
+            "Integration points defined"
+          ],
+          "_id": "5f60941352b780335cc8c213",
+          "nameId": "Prepared",
+          "name": "Prepared",
+          "description": "All pre-conditions for starting the work have been met."
+        },
+        {
+          "checklists": [
+            "Development started",
+            "Progress monitored",
+            "Definition of done in place",
+            "Tasks being progressed"
+          ],
+          "_id": "5f60941352b780335cc8c214",
+          "nameId": "Started",
+          "name": "Started",
+          "description": "The work is proceeding."
+        },
+        {
+          "checklists": [
+            "Tasks being completed",
+            "Unplanned work under control",
+            "Risks under control",
+            "Estimates revised to reflect performance",
+            "Progress measured",
+            "Re-work under control",
+            "Commitments consistently met"
+          ],
+          "_id": "5f60941352b780335cc8c215",
+          "nameId": "UnderControl",
+          "name": "Under Control",
+          "description": "The work is going well, risks are under control, and productivity levels are sufficient to achieve a satisfactory result."
+        },
+        {
+          "checklists": [
+            "Only admin tasks left",
+            "Results achieved",
+            "Resulting system accepted"
+          ],
+          "_id": "5f60941352b780335cc8c216",
+          "nameId": "Concluded",
+          "name": "Concluded",
+          "description": "The work to produce the results has been concluded."
+        },
+        {
+          "checklists": [
+            "Lessons learned",
+            "Metrics available",
+            "Everything archived",
+            "Budget reconciled & closed",
+            "Team released",
+            "No outstanding, uncompleted tasks"
+          ],
+          "_id": "5f60941352b780335cc8c217",
+          "nameId": "Closed",
+          "name": "Closed",
+          "description": "All remaining housekeeping tasks have been completed and the work has been officially closed."
+        }
+      ],
+      "subAlphas": [
+        {
+          "workProducts": [],
+          "states": [
+            {
+              "checklists": [
+                "An impediment has been identified that is slowing or preventing progress ",
+                "The impediment has been shared, communciated or flagged for discussion "
+              ],
+              "_id": "5f60941352b780335cc8c219",
+              "nameId": "Raised",
+              "name": "Raised",
+              "description": "The impediment has been identified, surfaced, verbalized or otherwise communicated."
+            },
+            {
+              "checklists": [
+                "It has been agreed which team member of members should take ownership of the task of removing the impediment "
+              ],
+              "_id": "5f60941352b780335cc8c21a",
+              "nameId": "Owned",
+              "name": "Owned",
+              "description": "There is clear ownership of the impediment in terms of an individual or sub-team that has taken primary responsibility for its removal."
+            },
+            {
+              "checklists": [
+                "The impediment has been removed such that it is no longer blocking or slowing progress "
+              ],
+              "_id": "5f60941352b780335cc8c21b",
+              "nameId": "Resolved",
+              "name": "Resolved",
+              "description": "The impediment has been cleared or removed so that the work that was being impeded can now be moved forward again efficiently and effectively."
+            }
+          ],
+          "_id": "5f60941352b780335cc8c218",
+          "nameId": "Impediment",
+          "name": "Impediment",
+          "parent_name_id": "Work",
+          "description": "Something that is preventing or slowing productive progress."
+        }
+      ],
+      "_id": "5f60941352b780335cc8c211",
+      "nameId": "Work",
+      "name": "Work",
+      "description": "Activity involving mental or physical effort done in order to achieve a result. In the context of software engineering, work is everything that the team does to meet the goals of producing a software system matching the requirements and addressing the opportunity presented by the stakeholders. The work is guided by the practices that make up the team’s way-of-working."
+    }
+  ],
+  "competencies": [
+    {
+      "levels": [
+        "Assists",
+        "Applies",
+        "Masters",
+        "Adapt",
+        "Innovates"
+      ],
+      "_id": "5f60941352b780335cc8c21c",
+      "nameId": "Leadership",
+      "name": "Leadership",
+      "description": "The ability to inspire and motivate a group of people to achieve a successful conclusion to their work and to meet their objectives."
+    },
+    {
+      "levels": [
+        "Assists",
+        "Applies",
+        "Masters",
+        "Adapt",
+        "Innovates"
+      ],
+      "_id": "5f60941352b780335cc8c21d",
+      "nameId": "Management",
+      "name": "Management",
+      "description": "The ability to coordinate, plan and track the work done by a team. The management competency is the administrative and organizational ability that enables the right things to be done at the right time to maximize a team’s chances of success."
+    }
+  ],
+  "patterns": [
+    {
+      "alphas": [],
+      "activities": [],
+      "competencies": [],
+      "pattern": [
+        {
+          "alphas": [],
+          "activities": [
+            "HoldADailyStandUp"
+          ],
+          "competencies": [],
+          "_id": "5f60941352b780335cc8c21f",
+          "name": "Round-Robin Stand-Up",
+          "nameId": "Round-RobinStand-Up",
+          "description": "A round-robin approach ensures that everyone has a chance to speak. The team usually gathers around the progress board. Each team member speaks in turn and answers three questions: What did I do yesterday? What am I doing today? What are my impediments?. Actions to remove Impediments are agreed and owned, but longer discussion points are off-lined until after the whole-team meeting."
+        },
+        {
+          "alphas": [],
+          "activities": [
+            "HoldADailyStandUp"
+          ],
+          "competencies": [],
+          "_id": "5f60941352b780335cc8c220",
+          "name": "Board-Driven Stand-Up",
+          "nameId": "Board-DrivenStand-Up",
+          "description": "Use the progress board to drive the stand-up. Visit in-progress items in priority order, starting with the top priority ones closest to being done. Focus on what needs to happen to move the item towards completion. Everyone should provide an update because all work should be on the board, but a quick round robin “any other business” at the end ensures everyone gets to speak and flushes out any work being done that is not on the board."
+        }
+      ],
+      "_id": "5f60941352b780335cc8c21e",
+      "name": "Collaboration Testing",
+      "nameId": "CollaborationTesting",
+      "description": "Collaboration patterns provide guidance on working style, leadership and ownership. Apply collaboration patterns to: Allow teams to influence their own working style, Increase team productivity by facilitating effective communication, Enable the build-up of a high-trust environment through continuous information sharing and shared responsibilities, Maximize team communication and minimize management overhead."
+    },
+    {
+      "alphas": [],
+      "activities": [],
+      "competencies": [],
+      "pattern": [
+        {
+          "alphas": [],
+          "activities": [
+            "EvolveAReleaseableProduct"
+          ],
+          "competencies": [],
+          "_id": "5f609666b8262231f48403d5",
+          "name": "Cross-Functional Team",
+          "nameId": "Cross-FunctionalTeam",
+          "description": "The team contains all the specialist skills needed to get the whole job done. For a team to evolve a complex product such as a software system, this typically means the team members between them must have all the following competencies: Stakeholder Representation, Analysis, Development, Testing."
+        }
+      ],
+      "_id": "5f609666b8262231f48403d4",
+      "name": "Development Roles",
+      "nameId": "DevelopmentRoles",
+      "description": "Development Role patterns provide guidance on roles and associated responsibilities and competencies required to develop a solution to meet the needs of the stakeholders."
+    },
+    {
+      "alphas": [],
+      "activities": [],
+      "competencies": [],
+      "pattern": [
+        {
+          "alphas": [],
+          "activities": [
+            "EvolveAReleaseableProduct"
+          ],
+          "competencies": [],
+          "_id": "5f609666b8262231f48403d7",
+          "name": "Manage Technical Debt",
+          "nameId": "ManageTechnicalDebt",
+          "description": "If value is built into a product one small value increment at a time, and just enough is done to make the product releasable each time, some desired changes to the code-base may be deferred, such as the fixing of non-critical defects. Each such item of technical debt should be logged, and its subsequent removal prioritized against the adding of more user-requested value into the product."
+        },
+        {
+          "alphas": [],
+          "activities": [
+            "EvolveAReleaseableProduct"
+          ],
+          "competencies": [],
+          "_id": "5f609666b8262231f48403d8",
+          "name": "Shared Ownership",
+          "nameId": "SharedOwnership",
+          "description": "The team takes shared responsibility for the product, and no parts of the software system can be considered “no go areas” for any team members. This reduces the risks and delays associated with bottlenecks and single points-of-failure. Strategies for achieving this include pair-working, including pair-programming, and ensuring all code is unit-tested and refactored, so it is clear, clean and maintainable by anyone."
+        },
+        {
+          "alphas": [],
+          "activities": [
+            "EvolveAReleaseableProduct"
+          ],
+          "competencies": [],
+          "_id": "5f609666b8262231f48403d9",
+          "name": "Minimal Design",
+          "nameId": "MinimalDesign",
+          "description": "Agile teams think hard about design, but focus on adopting the simplest approach to achieving the known things that must be achieved next. This acts to minimize complexity, risk and time-to-value, and maximize return-on-investment. The design strategy is then evolved continuously as more is learned."
+        },
+        {
+          "alphas": [],
+          "activities": [
+            "EvolveAReleaseableProduct"
+          ],
+          "competencies": [],
+          "_id": "5f609666b8262231f48403da",
+          "name": "Build Quality In",
+          "nameId": "BuildQualityIn",
+          "description": "Quality is planned, designed and built in: The tests that define acceptable quality are agreed before work is started (e.g. at Product Backlog Item and unit test level), An item is not finished until adequate quality has been achieved, Enough design is done to ensure the right approach is taken, and continuous refactoring is done to ensure that the code-base stays robust and maintainable."
+        },
+        {
+          "alphas": [],
+          "activities": [
+            "EvolveAReleaseableProduct"
+          ],
+          "competencies": [],
+          "_id": "5f609666b8262231f48403db",
+          "name": "Automate as Much as Possible",
+          "nameId": "AutomateasMuchasPossible",
+          "description": "If a software system is evolved one increment at a time, while ensuring its quality, many actions are repeated frequently. If these are not automated, they will be too slow and error-prone. For these reasons, actions that should be automated include: Continuous Integration / Build, Code Quality / Unit Tests, Acceptance / Regression Tests, Environment Preparation, Deployment."
+        },
+        {
+          "alphas": [],
+          "activities": [
+            "EvolveAReleaseableProduct"
+          ],
+          "competencies": [],
+          "_id": "5f609666b8262231f48403dc",
+          "name": "Fast Feedback Loops",
+          "nameId": "FastFeedbackLoops",
+          "description": "Key to agile development is getting as much feedback as possible, as early as possible, in order to converge on an accurate solution. To achieve this, tight feedback loops should exist at many levels, including: Pair-Programming, Test-Driven Development, Continuous Integration, Frequent Demonstrations, Validated-learning achieved by releasing early and often."
+        }
+      ],
+      "_id": "5f609666b8262231f48403d6",
+      "name": "Technical Excellence",
+      "nameId": "TechnicalExcellence",
+      "description": "Technical Excellence patterns provide guidance on how to evolve a high-quality technical solution."
+    }
+  ],
+  "extensionElements": []
+}

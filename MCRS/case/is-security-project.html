@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PT.C - IS Security Project</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        /* background: lightgray; */
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      .container {
+        min-height: 100vh;
+        padding: 1.5rem;
+        width: 75vw;
+        background: white;
+        box-shadow: 0px 5px 5px #888888;
+      }
+      ul.dash {
+        list-style-type: none;
+        padding-left: 2.5em;
+      }
+      ul.dash li:before {
+        content: "–";
+        position: absolute;
+        margin-left: -1em;
+      }
+      .button {
+        color: white;
+        font-weight: 700;
+        border: none;
+        font-size: 1rem;
+        padding: 0.75rem;
+      }
+      #loading {
+        display: none;
+      }
+      #loading.loading {
+        display: block;
+      }
+      .center {
+        text-align: center;
+      }
+      .right {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="center">Case Study</h2>
+      <h1 class="center">IS Security Project (PT. C)</h1>
+      <h3>About</h3>
+      <p>
+        To illustrate our proposal, we have selected method chunks that deal
+        with information system (IS) security within requirements engineering
+        (RE).The given project is described by:
+      </p>
+      <ul>
+        <li>the great influence on the whole organisation;</li>
+        <li>the need for ensuring the greater progress;</li>
+        <li>
+          the organisation does not have the experts in this field and does not
+          plan to employ them;
+        </li>
+        <li>
+          the need for a better explanation of method chunks and their
+          application.
+        </li>
+      </ul>
+      <p>
+        The method engineer has chosen three project characteristics (since the
+        weights of the others are equal to zero) and has described the method
+        chunks according to methods properties.
+      </p>
+      <p>
+        Thus, these methods chunks are compared according to six criteria, which
+        concern two groups: project characteristics and proper method
+        characteristics. The first group includes
+        <b>impact, level of innovation, and expertise.</b> The second group
+        comprises <b>guidance, approach, and formalism.</b>
+      </p>
+      <p>
+        Depending on project description, the method engineer has defined the
+        following preferences rules for these criteria:
+      </p>
+      <ul class="dash">
+        <li>Impact on organisation: maximum;</li>
+        <li>Level of innovation: maximum;</li>
+        <li>Required expertise: minimum;</li>
+        <li>
+          Guidance: a predefined taxonomy is better than heuristics, which is
+          better than a simple guidelines;
+        </li>
+        <li>
+          Approach: a systemic approach is better than exploratory, which is
+          better than explanatory.
+        </li>
+        <li>
+          Formalism: a formal approach is better than semi-formal one, which is
+          better than informal one.
+        </li>
+      </ul>
+      <h3>JSON format</h3>
+      <div id="json"></div>
+      <pre class="right">Get recommendation:</pre>
+      <div class="right">
+        <label
+          >id
+          <input
+            type="text"
+            id="project"
+            name="project"
+            value="company-c/is-security-project"
+        /></label>
+        <button
+          style="background: grey"
+          class="button"
+          type="button"
+          onclick="find(document.getElementById('project').value)"
+        >
+          Use existing project
+        </button>
+        - or -
+        <button
+          style="background: green"
+          class="button"
+          type="button"
+          onclick="post()"
+        >
+          Save as new project
+        </button>
+      </div>
+      <div id="loading">Loading...</div>
+      <div id="results"></div>
+    </div>
+    <script>
+      var project = {};
+      project.name = "IS Security Project";
+      project.description =
+        "Illustration project that deal with information system (IS) security within requirements engineering (RE).";
+
+      var impact = {
+        id: "impact",
+        rule: "maximum",
+        weight: 0.3
+      };
+
+      var innovation = {
+        id: "level-of-innovation",
+        rule: "maximum",
+        weight: 0.2
+      };
+
+      var expertise = {
+        id: "expertise",
+        rule: "minimum",
+        weight: 0.5
+      };
+
+      var guidance = {
+        id: "guidance",
+        ref: "predefined taxonomy/heuristics/guidelines",
+        rule: "preference_list",
+        value: ["predefined taxonomy", "heuristics", "guidelines"],
+        weight: 0.33
+      };
+
+      var approach = {
+        id: "approach",
+        ref: "systemic/exploratory/explanatory",
+        rule: "preference_list",
+        value: ["systemic", "exploratory", "explanatory"],
+        weight: 0.33
+      };
+
+      var formalism = {
+        id: "formalism",
+        ref: "formal/semi-formal/informal",
+        rule: "preference_list",
+        value: ["formal", "semi-formal", "informal"],
+        weight: 0.33
+      };
+
+      project.characteristics = [
+        impact,
+        innovation,
+        expertise,
+        guidance,
+        approach,
+        formalism
+      ];
+
+      console.log("Project", project);
+
+      var token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNvbXBhbnktYyIsImlhdCI6MTU2NDk2MjIxN30.wnzHu-EAp1xhNe1JVkP52nMuCAwadh88aMOgqfDrCUc";
+
+      var pre = document.createElement("pre");
+      pre.innerHTML = JSON.stringify(project, undefined, 2);
+      var loading = document.getElementById("loading");
+      document.getElementById("json").appendChild(pre);
+      var post = function() {
+        loading.className = "loading";
+        var xhr = new XMLHttpRequest();
+        var projectUrl = "http://localhost:4000/projects";
+        xhr.open("POST", projectUrl, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+            console.log(res.id);
+            find(res.id);
+          }
+        };
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Authorization", "Bearer " + token);
+        xhr.send(JSON.stringify(project));
+      };
+
+      var find = function(id) {
+        loading.className = "loading";
+        var xhr = new XMLHttpRequest();
+        var findUrl = "http://localhost:4000/find";
+        xhr.open("POST", findUrl, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+            loading.className = "";
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+            var results = res.results;
+            var resultsDiv = document.getElementById("results");
+            while (resultsDiv.firstChild) {
+              resultsDiv.removeChild(resultsDiv.firstChild);
+            }
+            for (r in results) {
+              console.log("r", results[r]);
+              var h = document.createElement("h4");
+              h.innerHTML = results[r].model;
+              resultsDiv.append(h);
+              var values = results[r].values;
+              for (mc in values) {
+                var para = document.createElement("p");
+                var node = document.createTextNode(
+                  "Rank: " + values[mc].rank + " "
+                );
+                var node2 = document.createTextNode(
+                  values[mc].methodChunk.name +
+                    " (score: " +
+                    values[mc].score +
+                    ")"
+                );
+                var node3 = document.createTextNode(
+                  values[mc].methodChunk.description
+                );
+                var a = document.createElement("a");
+                a.href = values[mc].methodChunk.url;
+                a.innerText = values[mc].methodChunk.url;
+                para.appendChild(node);
+                para.appendChild(document.createElement("br"));
+                para.appendChild(node2);
+                para.appendChild(document.createElement("br"));
+                para.appendChild(node3);
+                para.appendChild(document.createElement("br"));
+                para.appendChild(a);
+                resultsDiv.append(para);
+              }
+            }
+          }
+        };
+        var project = {
+          project: id
+        };
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Authorization", "Bearer " + token);
+        xhr.send(JSON.stringify(project));
+      };
+    </script>
+  </body>
+</html>

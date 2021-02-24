@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MBMS B</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      nav {
+        height: 8.4vh;
+      }
+      .container {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+      }
+      pre {
+        overflow: hidden;
+      }
+      footer {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand mb-0 h1" href="index.html"
+        >Method Base Management System (MBMS) PT. B</a
+      >
+    </nav>
+    <div class="container">
+      <h1>Method Chunks</h1>
+      <br />
+      <div class="card-deck" id="card-deck">
+        <div class="card" id="card">
+          <div class="card-body">
+            <h5 class="card-title">Name</h5>
+            <p class="card-text">
+              Description
+            </p>
+            <a href="#" class="card-url btn btn-primary">Browse</a>
+            <a href="#" class="card-publish btn btn-primary">Publish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-light">
+      <h5 class="text-center">PT. B Company Information</h5>
+      <div id="pre"></div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const baseUrlB = "C:/Users/User/Desktop/mcrs/case/mbms-b/browse.html#";
+      const METHOD_CHUNKS = [
+        {
+          name: "NFR Framework",
+          description: "NFR Framework for IS Security",
+          url: baseUrlB + "NFR-framework",
+          characteristics: [
+            {
+              id: "impact",
+              value: "high"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "normal"
+            },
+            {
+              id: "guidance",
+              value: "predefined taxonomy",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "approach",
+              value: "explanatory",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "semi-formal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "KAOS",
+          description: "KAOS for IS Security",
+          url: baseUrlB + "KAOS",
+          characteristics: [
+            {
+              id: "impact",
+              value: "low"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "high"
+            },
+            {
+              id: "guidance",
+              value: "heuristics",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "approach",
+              value: "exploratory",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "formal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "Secure Tropos",
+          description: "Secure Tropos for IS Security",
+          url: baseUrlB + "secure-tropos",
+          characteristics: [
+            {
+              id: "impact",
+              value: "high"
+            },
+            {
+              id: "level-of-innovation",
+              value: "low"
+            },
+            {
+              id: "expertise",
+              value: "high"
+            },
+            {
+              id: "approach",
+              value: "systemic",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "formal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "GBRAM",
+          description: "GBRAM for IS Security",
+          url: baseUrlB + "gbram",
+          characteristics: [
+            {
+              id: "impact",
+              value: "low"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "normal"
+            },
+            {
+              id: "guidance",
+              value: "heuristics",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "formalism",
+              value: "informal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "Misuse Cases",
+          description: "Misuse Cases for IS Security",
+          url: baseUrlB + "misusecases",
+          characteristics: [
+            {
+              id: "impact",
+              value: "normal"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "low"
+            },
+            {
+              id: "guidance",
+              value: "guidelines",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "approach",
+              value: "explanatory",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "informal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        }
+      ];
+
+      var getCompanyInfo = function() {
+        var xhr = new XMLHttpRequest();
+        var url = "http://localhost:4000/providers/company-b";
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+            console.log(res.id);
+            var div = document.getElementById("pre");
+            var d = document.createElement("div");
+            d.innerHTML =
+              "<b>" +
+              res.name +
+              "</b>" +
+              " (" +
+              res.email +
+              ")<br>" +
+              res.description +
+              "<br><br><b>JSON format</b>";
+            div.appendChild(d);
+            var pre = document.createElement("pre");
+            pre.classList.add("text-light");
+            pre.innerHTML = JSON.stringify(res, undefined, 2);
+            div.appendChild(pre);
+          }
+        };
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send();
+      };
+
+      var publish = function(k) {
+        x = METHOD_CHUNKS[k];
+        var card = document.getElementById(x.name);
+        card.className = "card loading";
+        card.querySelector(".card-publish").classList.add("disabled");
+        var xhr = new XMLHttpRequest();
+        var url = "http://localhost:4000/method-chunks";
+        xhr.open("POST", url, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+            alert(xhr.status + " " + xhr.statusText);
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+            console.log(res.id);
+            card.querySelector(".card-publish").classList.remove("disabled");
+          }
+        };
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Authorization", "Bearer " + token);
+        xhr.send(JSON.stringify(x));
+      };
+      console.log("MethodChunks", METHOD_CHUNKS);
+
+      var token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNvbXBhbnktYiIsImlhdCI6MTU2NTExNDk2MX0._YVYHcyN9x57OMDsWVNmz7lsoeej7ZA6z5XFheKa_lI";
+
+      var card = document.getElementById("card");
+      card.className = "d-none";
+      var deck = document.getElementById("card-deck");
+
+      getCompanyInfo();
+      for (i in METHOD_CHUNKS) {
+        var mc = METHOD_CHUNKS[i];
+        var mcCard = card.cloneNode(true);
+        mcCard.className = "card";
+        mcCard.id = mc.name;
+        deck.appendChild(mcCard);
+        if ((i + 1) % 3 == 0) {
+          var col12 = document.createElement("div");
+          col12.className = "col-12 pb-3";
+          deck.appendChild(col12);
+        }
+        mcCard.querySelector(".card-title").innerHTML = mc.name;
+        mcCard.querySelector(".card-text").innerHTML = mc.description;
+        mcCard.querySelector(".card-url").href = mc.url;
+        mcCard.querySelector(".card-publish").href =
+          "javascript:publish(" + i + ")";
+      }
+
+      var empty = card.cloneNode(true);
+      empty.className = "card invisible";
+      deck.appendChild(empty);
+    </script>
+  </body>
+</html>

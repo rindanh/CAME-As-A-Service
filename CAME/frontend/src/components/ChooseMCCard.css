@@ -1,0 +1,40 @@
+.choose-card.checked {
+  background-color: #e6ffe6;
+}
+
+.checked {
+  background-color: #e6ffe6;
+}
+
+.choose-card:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.choose-card:hover .tooltiptext {
+  visibility: visible;
+}
+
+.choose-card .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  opacity: 0.7;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  x-index:1;
+}
+
+.tip {
+  justify-content: center;
+}
+
+.conflict-container {
+  max-width: 40vw; 
+}

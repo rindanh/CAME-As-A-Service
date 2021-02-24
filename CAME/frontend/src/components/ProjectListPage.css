@@ -1,0 +1,28 @@
+.project-card.checked {
+  background-color: #cdcdcd;
+}
+
+.project-card:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.project-card:hover .tooltiptext {
+  visibility: visible;
+}
+
+.project-card .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  opacity: 0.7;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  x-index:1;
+}

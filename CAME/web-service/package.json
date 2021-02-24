@@ -1,0 +1,27 @@
+{
+  "name": "web-service",
+  "version": "1.0.0",
+  "description": "CAME Tools' web service",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rinda",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongo-tenant": "^1.8.0",
+    "mongoose": "^5.9.9",
+    "mongoose-bcrypt": "^1.6.0",
+    "mongoose-seed": "^0.6.0",
+    "mongoose-timestamp": "^0.6.0",
+    "node-fetch": "^2.6.0",
+    "slugify": "^1.4.5"
+  }
+}

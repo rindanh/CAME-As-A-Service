@@ -1,0 +1,22 @@
+.provider-card .card-body {
+  line-height: 1.5rem;
+  min-height: 4.5rem;
+}
+
+.button-view-mode:focus {
+  box-shadow: none !important;
+}
+
+.provider-card .description,
+.mc .col-md-4 .description {
+  display: block;
+  text-overflow: ellipsis;
+  overflow-y: scroll;
+  line-height: 1.5rem;
+  height: 6rem;
+}
+
+.char .table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}

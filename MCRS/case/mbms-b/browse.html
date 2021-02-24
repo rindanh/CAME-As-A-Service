@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MBMS B</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      nav {
+        height: 8.4vh;
+      }
+      .container-fluid {
+        padding: 0;
+        height: 91.6vh;
+        display: flex;
+      }
+      footer {
+        padding: 1rem;
+      }
+      .sidebar {
+        width: 30vw;
+        padding: 1rem;
+        overflow-y: scroll;
+      }
+      .content {
+        padding: 1rem 1rem 5rem 1rem;
+        width: 70vw;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand mb-0 h1" href="index.html"
+        >Method Base Management System (MBMS) PT. B</a
+      >
+    </nav>
+    <div class="container-fluid">
+      <div class="sidebar" id="sidebar">
+        <h6>Method Chunks</h6>
+        <ul></ul>
+      </div>
+      <div class="content" id="content">
+        <h2>Browse</h2>
+        <p>
+          Scroll down below to browse available method chunks or choose one item
+          from the list to start.
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const baseUrlB = "C:/Users/User/Desktop/mcrs/case/mbms-b/browse.html#";
+      const METHOD_CHUNKS = [
+        {
+          name: "NFR Framework",
+          description: "NFR Framework for IS Security",
+          url: baseUrlB + "NFR-framework",
+          characteristics: [
+            {
+              id: "impact",
+              value: "high"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "normal"
+            },
+            {
+              id: "guidance",
+              value: "predefined taxonomy",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "approach",
+              value: "explanatory",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "semi-formal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "KAOS",
+          description: "KAOS for IS Security",
+          url: baseUrlB + "KAOS",
+          characteristics: [
+            {
+              id: "impact",
+              value: "low"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "high"
+            },
+            {
+              id: "guidance",
+              value: "heuristics",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "approach",
+              value: "exploratory",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "formal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "Secure Tropos",
+          description: "Secure Tropos for IS Security",
+          url: baseUrlB + "secure-tropos",
+          characteristics: [
+            {
+              id: "impact",
+              value: "high"
+            },
+            {
+              id: "level-of-innovation",
+              value: "low"
+            },
+            {
+              id: "expertise",
+              value: "high"
+            },
+            {
+              id: "approach",
+              value: "systemic",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "formal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "GBRAM",
+          description: "GBRAM for IS Security",
+          url: baseUrlB + "gbram",
+          characteristics: [
+            {
+              id: "impact",
+              value: "low"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "normal"
+            },
+            {
+              id: "guidance",
+              value: "heuristics",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "formalism",
+              value: "informal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        },
+        {
+          name: "Misuse Cases",
+          description: "Misuse Cases for IS Security",
+          url: baseUrlB + "misusecases",
+          characteristics: [
+            {
+              id: "impact",
+              value: "normal"
+            },
+            {
+              id: "level-of-innovation",
+              value: "high"
+            },
+            {
+              id: "expertise",
+              value: "low"
+            },
+            {
+              id: "guidance",
+              value: "guidelines",
+              ref: "predefined taxonomy/heuristics/guidelines"
+            },
+            {
+              id: "approach",
+              value: "explanatory",
+              ref: "systemic/exploratory/explanatory"
+            },
+            {
+              id: "formalism",
+              value: "informal",
+              ref: "formal/semi-formal/informal"
+            }
+          ]
+        }
+      ];
+
+      var publish = function(k) {
+        x = METHOD_CHUNKS[k];
+        var n = x.url.lastIndexOf("#");
+        var id = x.url.substring(n + 1);
+        var div = document.getElementById(id);
+        div.querySelector(".publish").classList.add("disabled");
+        var xhr = new XMLHttpRequest();
+        var url = "http://localhost:4000/method-chunks";
+        xhr.open("POST", url, true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+            alert(xhr.status + " " + xhr.statusText);
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+            console.log(res.id);
+            div.querySelector(".publish").classList.remove("disabled");
+          }
+        };
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Authorization", "Bearer " + token);
+        xhr.send(JSON.stringify(x));
+      };
+      console.log("MethodChunks", METHOD_CHUNKS);
+
+      var token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNvbXBhbnktYiIsImlhdCI6MTU2NTExNDk2MX0._YVYHcyN9x57OMDsWVNmz7lsoeej7ZA6z5XFheKa_lI";
+
+      var sidebar = document.getElementById("sidebar");
+      var content = document.getElementById("content");
+      var ul = sidebar.querySelector("ul");
+      for (i in METHOD_CHUNKS) {
+        var mc = METHOD_CHUNKS[i];
+        var a = document.createElement("a");
+        a.innerHTML = mc.name;
+        a.href = mc.url;
+        var li = document.createElement("li");
+        li.appendChild(a);
+        ul.appendChild(li);
+
+        var div = document.createElement("div");
+        var n = mc.url.lastIndexOf("#");
+        div.id = mc.url.substring(n + 1);
+
+        var h2 = document.createElement("h2");
+        h2.innerHTML = mc.name;
+        h2.classList.add("pt-4");
+        div.append(h2);
+
+        var desc = document.createElement("p");
+        desc.innerHTML = mc.description;
+        var label = "Link: ";
+        var url = document.createElement("a");
+        url.innerHTML = mc.url;
+        url.href = mc.url;
+        div.append(label);
+        div.append(url);
+        div.append(desc);
+
+        var h5 = document.createElement("h5");
+        h5.classList.add("pt-3");
+        h5.innerHTML = "Characteristics";
+        div.append(h5);
+
+        var table = document.createElement("table");
+        table.classList.add("table");
+        var thead = document.createElement("thead");
+        var tbody = document.createElement("tbody");
+        var tr = document.createElement("tr");
+        var tid = document.createElement("th");
+        tid.innerHTML = "id";
+        var tvalue = document.createElement("th");
+        tvalue.innerHTML = "value";
+        var tref = document.createElement("th");
+        tref.innerHTML = "ref";
+        tr.appendChild(tid);
+        tr.appendChild(tvalue);
+        tr.appendChild(tref);
+        thead.appendChild(tr);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        for (c in mc.characteristics) {
+          var tr = document.createElement("tr");
+          var tdid = document.createElement("td");
+          tdid.innerHTML = mc.characteristics[c].id;
+          var tdv = document.createElement("td");
+          tdv.innerHTML = mc.characteristics[c].value;
+          var tdr = document.createElement("td");
+          tdr.innerHTML = mc.characteristics[c].ref || "";
+          tr.appendChild(tdid);
+          tr.appendChild(tdv);
+          tr.appendChild(tdr);
+          tbody.appendChild(tr);
+        }
+        div.append(table);
+
+        var j = document.createElement("h5");
+        j.innerHTML = "JSON format";
+        div.append(j);
+
+        var pre = document.createElement("pre");
+        pre.style.maxHeight = "35vh";
+        pre.style.backgroundColor = "lavender";
+        pre.innerHTML = pre.innerHTML = JSON.stringify(mc, undefined, 2);
+        div.append(pre);
+
+        var button = document.createElement("a");
+        button.innerHTML = "Publish";
+        button.href = "javascript:publish(" + i + ")";
+        button.className = "btn btn-primary publish";
+        div.append(button);
+        div.append(document.createElement("hr"));
+
+        content.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

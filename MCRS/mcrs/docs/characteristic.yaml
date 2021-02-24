@@ -1,0 +1,147 @@
+components:
+  schemas:
+    CharacteristicInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: characteristic name (unique)
+        dimension:
+          type: string
+          description: id of dimension of this characteristic. See `dimensions` for more info.
+        description:
+          type: string
+          description: a brief description about the characteristic
+        characteristicValues:
+          type: array
+          description: value groups of characteristic.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              ref:
+                type: string
+                description: a string to help reference this group of values. If not specified, will be auto generated from values.
+              values:
+                type: array
+                items: 
+                  type: string
+                description: value of characteristic in string (e.g. low, medium, high, weak, strong) in ascending order (smallest/min-largest/max)
+              isQuantifiable:
+                type: boolean
+                description: whether or not the values has sort/order. If `true`, the `minimum/maximum` rule will be available.
+      required:
+        - name
+        - dimension
+        - characteristicValues
+    CharacteristicUpdateInput:
+      type: object
+      properties:
+        dimension:
+          type: string
+          description: id of dimension of this characteristic. See `dimensions` for more info.
+        description:
+          type: string
+          description: a brief description about the characteristic
+        characteristicValues:
+          type: array
+          description: value groups of characteristic.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              ref:
+                type: string
+                description: a string to help reference this group of values. If not specified, will be auto generated from values.
+              values:
+                type: array
+                items: 
+                  type: string
+                description: value of characteristic in string (e.g. low, medium, high, weak, strong) in ascending order (smallest/min-largest/max)
+              isQuantifiable:
+                type: boolean
+                description: whether or not the values has sort/order. If `true`, the `minimum/maximum` rule will be available.
+    Characteristic:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: auto-generated id by MongoDB (unique)
+        id:
+          type: string
+          description: slug-type id (lowercase string with no special characters delimited by dash '-') derived from characteristic name (unique)
+        name:
+          type: string
+          description: characteristic name (unique)
+        dimension:
+          type: string
+          description: id of dimension of this characteristic. See `dimensions` for more info.
+        description:
+          type: string
+          description: a brief description about the characteristic
+        characteristicValues:
+          type: array
+          description: value groups of characteristic.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              ref:
+                type: string
+                description: a string to help reference this group of values. If not specified, will be auto generated from values.
+              values:
+                type: array
+                items: 
+                  type: string
+                description: value of characteristic in string (e.g. low, medium, high, weak, strong) in ascending order (smallest/min-largest/max)
+              isQuantifiable:
+                type: boolean
+                description: whether or not the values has sort/order. If `true`, the `minimum/maximum` rule will be available.
+        createdAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this characteristic is created by MongoDB
+        updatedAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this characteristic is modified by MongoDB
+  examples:
+    CharacteristicInputExample:
+      value:
+        name: "User Involvement"
+        dimension: "human"
+        description: "The rate of user involvement in project."
+        characteristicValues: [
+          {
+            values: ["low", "medium", "high"],
+            isQuantifiable: true
+          }
+        ]
+    CharacteristicExample:
+      value:
+        _id: "5d1cfc36bdc07232bc0bc1f7"
+        id: "impact"
+        name: "Impact"
+        description: "Impact that will be generated in project."
+        dimension: "development-strategy"
+        characteristicValues: [
+          {
+            _id: "5d224d482aba2723501a0cca",
+            values: ["low", "medium", "high"],
+            isQuantifiable: true
+          },
+          {
+            _id: "5d224d482aba2723501a0ccb",
+            ref: "on project/on company",
+            values: ["on project", "on company"],
+            isQuantifiable: false
+          }
+        ]
+        createdAt: "2019-07-07T19:51:36.284Z"
+        updatedAt: "2019-07-07T19:51:36.284Z"

@@ -1,0 +1,257 @@
+components:
+  schemas:
+    ProviderInput:
+      type: object
+      properties:
+        email:
+          type: string
+          description: company valid email address (unique)
+        name:
+          type: string
+          description: company name (unique)
+        password:
+          type: string
+          format: password
+          description: password
+        description:
+          type: string
+          description: a brief description about the company
+        industry:
+          type: string
+          description: id of the field of industry the company is running in. See `industries` for more info.
+        urls:
+          type: array
+          description: a set of useful external link related to this company
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: a name that represents the url (e.g. homepage, company site, blog)
+              url:
+                type: string
+                description: absolute link to outer resource in the internet
+        contacts:
+          type: array
+          description: a human or computer resource that can be contacted for information related to this company. At least one of email / phone / address must be filled.
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: name of the owner of this contact info
+              role:
+                type: string
+                description: role / job / position of this person in the company
+              description:
+                type: string
+                description: a brief description about the contact info
+              email:
+                type: string
+                description: valid email address of this contact info
+              phone:
+                type: string
+                description: phone number of this contact info
+              address:
+                type: string
+                description: mailing address of this contact info
+        relatedProviders:
+          type: array
+          description: a set of companies id that have business-related relationship to this company
+          items:
+            type: string
+      required:
+        - email
+        - name
+        - password
+    ProviderUpdateInput:
+      type: object
+      properties:
+        description:
+          type: string
+          description: a brief description about the company
+        industry:
+          type: string
+          description: name of the field of industry the company is running in. See `industries` for more info.
+        urls:
+          type: array
+          description: a set of useful external link related to this company
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: a name that represents the url (e.g. homepage, company site, blog)
+              url:
+                type: string
+                description: absolute link to outer resource in the internet
+        contacts:
+          type: array
+          description: a human or computer resource that can be contacted for information related to this company. At least one of email / phone / address must be filled.
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: name of the owner of this contact info
+              role:
+                type: string
+                description: role / job / position of this person in the company
+              description:
+                type: string
+                description: a brief description about the contact info
+              email:
+                type: string
+                description: valid email address of this contact info
+              phone:
+                type: string
+                description: phone number of this contact info
+              address:
+                type: string
+                description: mailing address of this contact info
+        relatedProviders:
+          type: array
+          description: a set of companies id that have business-related relationship to this company
+          items:
+            type: string
+    Provider:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: auto-generated id by MongoDB (unique)
+        id:
+          type: string
+          description: slug-type id (lowercase string with no special characters delimited by dash '-') derived from company name (unique)
+        email:
+          type: string
+          description: company valid email address (unique)
+        name:
+          type: string
+          description: company name (unique)
+        description:
+          type: string
+          description: a brief description about the company
+        industry:
+          type: string
+          description: name of the field of industry the company is running in. See `industries` for more info.
+        urls:
+          type: array
+          description: a set of useful external link related to this company
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              name:
+                type: string
+                description: a name that represents the url (e.g. homepage, company site, blog)
+              url:
+                type: string
+                description: absolute link to outer resource in the internet
+        contacts:
+          type: array
+          description: a human or computer resource that can be contacted for information related to this company. At least one of email / phone / address must be filled.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              name:
+                type: string
+                description: name of the owner of this contact info
+              role:
+                type: string
+                description: role / job / position of this person in the company
+              description:
+                type: string
+                description: a brief description about the contact info
+              email:
+                type: string
+                description: valid email address of this contact info
+              phone:
+                type: string
+                description: phone number of this contact info
+              address:
+                type: string
+                description: mailing address of this contact info
+        relatedProviders:
+          type: array
+          description: a set of companies id that have business-related relationship to this company
+          items:
+            type: string
+        createdAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this provider is created by MongoDB
+        updatedAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this provider is modified by MongoDB
+  examples:
+    ProviderInputExample:
+      value:
+        email: "company@a.com"
+        name: "Company A (Ltd.)"
+        password: "password"
+        description: "Company A (Ltd.) has been working in apparel and fashion since 1899."
+        industry: "apparel-and-fashion"
+        urls: [
+          {
+            name: "Company Official Site",
+            url: "http://example.com"
+          }
+        ]
+        contacts: [
+          {
+            name: John Doe,
+            role: Public & Relation Officer,
+            description: "Assisting in any inquiries about the company.",
+            email: "john.doe@example.com",
+            phone: "(+62) 812 345 6789",
+            address: "Centrak Park, 679, CL"
+          }
+        ]
+        relatedProviders: [
+          "company-b",
+          "company-c"
+        ]
+    ProviderExample:
+      value:
+        _id: "5d224d482aba2723501a0cc8"
+        id: "company-a-ltd"
+        email: "company@a.com"
+        name: "Company A (Ltd.)"
+        description: "Company A (Ltd.) has been working in apparel and fashion since 1899."
+        industry: "apparel-and-fashion"
+        urls: [
+          {
+            _id: "5d224d482aba2723501a0cc9",
+            name: "Company Official Site",
+            url: "http://example.com"
+          }
+        ]
+        contacts: [
+          {
+            _id: "5d224d482aba2723501a0cca",
+            name: John Doe,
+            role: Public & Relation Officer,
+            description: "Assisting in any inquiries about the company.",
+            email: "john.doe@example.com",
+            phone: "(+62) 812 345 6789",
+            address: "Centrak Park, 679, CL"
+          }
+        ]
+        relatedProviders: [
+          "company-b",
+          "company-c"
+        ]
+        createdAt: "2019-07-07T19:51:36.284Z"
+        updatedAt: "2019-07-07T19:51:36.284Z"
+  securitySchemes:
+    bearerAuth: 
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

@@ -1,0 +1,139 @@
+components:
+  schemas:
+    MethodChunkInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: method chunk name (unique)
+        description:
+          type: string
+          description: a brief description about the method chunk
+        url:
+          type: string
+          description: location of method chunk that can be accessed
+        characteristics:
+          type: array
+          description: method chunk characteristics.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              id:
+                type: string
+                description: slug-type id of characteristic
+              ref:
+                type: string
+                description: ref of the group the value belongs to. If not specified, will use first group.
+              value:
+                type: string
+                description: value of characteristic in string (e.g. low, medium, high, weak, strong)
+      required:
+        - name
+        - provider
+        - url
+    MethodChunkUpdateInput:
+      type: object
+      properties:
+        description:
+          type: string
+          description: a brief description about the method chunk
+        url:
+          type: string
+          description: location of method chunk that can be accessed
+        characteristics:
+          type: array
+          description: method chunk characteristics.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              id:
+                type: string
+                description: slug-type id of characteristic
+              ref:
+                type: string
+                description: ref of the group the value belongs to. If not specified, will use first group.
+              value:
+                type: string
+                description: value of characteristic in string (e.g. low, medium, high, weak, strong)
+    MethodChunk:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: auto-generated id by MongoDB (unique)
+        id:
+          type: string
+          description: slug-type id (lowercase string with no special characters delimited by dash '-') derived from method chunk name (unique)
+        name:
+          type: string
+          description: method chunk name (unique)
+        description:
+          type: string
+          description: a brief description about the method chunk
+        provider:
+          type: string
+          description: slug-type id of the provider company
+        url:
+          type: string
+          description: location of method chunk that can be accessed
+        characteristics:
+          type: array
+          description: method chunk characteristics.
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: auto-generated id by MongoDB (unique)
+              id:
+                type: string
+                description: slug-type id of characteristic
+              ref:
+                type: string
+                description: ref of the group the value belongs to. If not specified, will use first group.
+              value:
+                type: string
+                description: value of characteristic in string (e.g. low, medium, high, weak, strong)
+        createdAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this method chunk is created by MongoDB
+        updatedAt:
+          type: string
+          format: date-time
+          description: auto-generated datetime when this method chunk is modified by MongoDB
+  examples:
+    MethodChunkInputExample:
+      value:
+        name: "Agile Development"
+        description: "Add value to a product by incrementally extending it, ensuring it is usable, releasable and maintainable."
+        url: "http://example.com"
+        characteristics: [
+          {
+            id: "management-commitment",
+            value: "high"
+          }
+        ]
+    MethodChunkExample:
+      value:
+        _id: "5d1cfc36bdc07232bc0bc1f7"
+        id: "agile-development"
+        name: "Agile Development"
+        description: "Add value to a product by incrementally extending it, ensuring it is usable, releasable and maintainable."
+        provider: "company-a-ltd"
+        url: "http://example.com"
+        characteristics: [
+          {
+            _id: "5d224d482aba2723501a0cca",
+            id: "management-commitment",
+            value: "high"
+          }
+        ]
+        createdAt: "2019-07-07T19:51:36.284Z"
+        updatedAt: "2019-07-07T19:51:36.284Z"

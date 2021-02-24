@@ -1,0 +1,40 @@
+.column-right {
+  height: 92vh;
+  overflow-y: scroll;
+  padding-bottom: 3rem;
+}
+
+.column-left {
+  background-color: #f1f1f1;
+  height: 92vh;
+  overflow-y: scroll;
+}
+
+.column-left .row {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+}
+
+.characteristic-card {
+  border: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  min-height: 7.5rem;
+}
+
+.characteristic-card.checked {
+  background-color: #adddba;
+}
+
+.column-right {
+  overflow-y: scroll;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.form-group {
+  margin-top: auto;
+}
