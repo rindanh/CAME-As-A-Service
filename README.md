@@ -5,22 +5,22 @@ CAME as a Service (CMaaS) is a CAME (Computer-Aided Method Engineering) tool bui
 Based on the SOSME Architecture, there are 3 components that is needed to run SME process like existing CAME tools do. 
 
 ## SOSME Components:
-###1. CAME (CMaaS)
-This is the client-side of SOSME Architecture. This part is the place for client (user) to build situational method. It is built as a service that can serve users from multiple tenant, hence called CAME as a Service (CMaaS)
+### 1. CAME (CMaaS)
+This is the client-side of SOSME Architecture. This part is the place for client (user) to build situational method. It is built as a service that can serve users from multiple tenant, hence named CAME as a Service (CMaaS)
 
 This project is focused on building this part. It is built as a web app with Node.js, MongoDB, and React + Redux. The method composition process that takes place in here is adopted from [Christopher Clement Andreas' works](https://ieeexplore.ieee.org/document/9092736).
 
-###2. MBMS
+### 2. MBMS
 This is the provider of this architecture. It provides method chunks that is needed to build situational method. 
 
-This part of project is originally developed by [Gianfranco Fertino](https://github.com/gejimayu/mbms). In this repository, this part has been modified a little to support SME process in CAME component.
+This part of project is originally developed by [Gianfranco Fertino](https://github.com/gejimayu/mbms). In this project, this part has been modified a little to support SME process in CAME component.
 
 In this repository, there are two MBMS that simulates two separate and different method chunks providers
 
-###3. MCRS
+### 3. MCRS
 This is the registry of this architecture that connects CAME and MBMS to support method chunks retrievals that is needed to build situational method. 
 
-This part of project is originally developed by (Audry Nyonata)[https://github.com/audrynyonata/MCRS]. In this repository, this part has been modified a little to support SME process in CAME component. 
+This part of project is originally developed by [Audry Nyonata](https://github.com/audrynyonata/MCRS). In this project, this part has been modified a little to support SME process in CAME component. 
 
 ## How to run this project
 
@@ -38,7 +38,7 @@ after requirements are fulfilled you can proceed to run.
 #### Run frontend
 1. Go to folder `CAME\frontend`
 2. Install dependencies with `npm install`
-3. Create `.env` file (by copy it from the .env.example)
+3. Create `.env` file (by copy it from the `.env.example` file)
 4. Start web application with `npm start`
 
 Open localhost:3200 to view it in the browser
@@ -46,7 +46,7 @@ Open localhost:3200 to view it in the browser
 #### Run web-service
 1. Go to folder `CAME\web-service`
 2. Install dependencies with `npm install`
-3. Create `.env` file (by copy it from the .env.example) and fill the MongoDB database's details based on your environment settings
+3. Create `.env` file (by copy it from the `.env.example` file) and fill the MongoDB database's details based on your environment settings
 4. Start the server with `npm start`
 
 The server will run on port 4500 if you don't change the port in the env file.
@@ -60,7 +60,7 @@ To run both MBMS, apply these steps to both of them
 
 1. Go to folder `MBMS\mbms1\web-service` for MBMS1 and `MBMS\mbms2\web-service` for MBMS2
 2. Install dependencies with `npm install`
-3. Create `.env` file (by copy it from the .env.example) and fill the MongoDB database's details based on your environment settings. The DB name and port must be different between MBMS1 and MBMS2
+3. Create `.env` file (by copy it from the `.env.example` file) and fill the MongoDB database's details based on your environment settings. The DB name and port must be different between MBMS1 and MBMS2
 4. Start the server with `npm start`
 
 If you don't change the port, the server will run on port 8080 for MBMS1 and port 8081 for MBMS2
