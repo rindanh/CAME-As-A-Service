@@ -131,3 +131,7 @@ Method chunks that is in the right format (in a representation that can be proce
 3. Daily Standup
 4. Product Backlog
 5. Product Ownership
+
+
+By Rinda Nur Hafizha
+github.com/rindanh/CAME-As-A-Service
